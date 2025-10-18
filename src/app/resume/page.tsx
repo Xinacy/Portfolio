@@ -369,7 +369,7 @@ export default function ResumePage() {
               </div>
               <div>
                 <strong className="text-white">Others:</strong> Redis, Nginx,
-                Kafka, Amazon S3, Cloudflare R2.
+                Caddy, Traefik, Kafka, Amazon S3, Cloudflare R2.
               </div>
             </div>
           </section>
