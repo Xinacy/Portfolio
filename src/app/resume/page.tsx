@@ -352,8 +352,8 @@ export default function ResumePage() {
               </div>
               <div>
                 <strong className="text-white">Library/Frameworks:</strong>{" "}
-                React, Next.js, FastAPI, Express, Tortoise-ORM, websockets,
-                discord.py
+                React, Next.js, TailwindCSS, FastAPI, Express, Tortoise-ORM,
+                websockets, discord.py
               </div>
               <div>
                 <strong className="text-white">AI/LLM Frameworks:</strong>{" "}
@@ -365,11 +365,11 @@ export default function ResumePage() {
               </div>
               <div>
                 <strong className="text-white">DevOps:</strong> Sentry,
-                Prometheus, Grafana, Loki, Kubernetes, Jenkins.
+                Prometheus, Grafana, Loki, Docker, Kubernetes, Jenkins.
               </div>
               <div>
                 <strong className="text-white">Others:</strong> Redis, Nginx,
-                Kafka, Shadcn/ui, TailwindCSS, JWT, Amazon S3, Cloudflare R2.
+                Kafka, Amazon S3, Cloudflare R2.
               </div>
             </div>
           </section>
