@@ -1,20 +1,33 @@
 const work = [
   {
+    company: "MegaLLM",
+    logo: "megallm.png",
+    position: "Senior Backend Engineer",
+    duration: "December 2025 - Present",
+    type: "Full-Time",
+    location: "Remote (BLR, India)",
+    description:
+      "Unified api for 10+ providers and 300+ LLM models with a single API key and a single endpoint.",
+    achievements: ["will update soon..."],
+    status: "current",
+  },
+  {
     company: "Tryzent Technologies",
     logo: "Tryzent.png",
     position: "AI/ML Engineer",
-    duration: "July 2025 - Present",
+    duration: "July 2025 - December 2025",
     type: "Full-Time",
     location: "Remote (Delhi, India)",
     description:
       "Leading AI/ML initiatives with cutting-edge technologies to build intelligent solutions.",
     achievements: [
-      "Developed an agentic workflow using LangGraph to summarize Zoom meetings via the Zoom Real-Time Messaging System",
       "Built a document extraction pipeline using LlamaIndex to assist GST filings by extracting key data from invoices and bank statements",
-      "Developed an AI tool using LangGraph & LlamaCloud to analyze resumes against job descriptions and optimize ATS scores",
-      "Integrated automated PDF editing and a job search feature with location and remote filters",
+      "Developed an AI tool using LangGraph & LlamaCloud to analyze bulk resumes against job description generate ATS-based rankings",
+      "Built a real-time face recognition attendance system with FastAPI, InsightFace, and YOLOv11 that automated classroom roll calls achieving 99.3% recognition accuracy",
+      "Developed an AI-powered multilingual audio processing pipeline using Python, PyTorch, and state-of-the-art models (Whisper, IndicConformer, MMS-LID, PyAnnote) that automatically transcribes and translates multi-speaker conversations in English, Hindi, and Punjabi, improving processing accuracy through intelligent speaker diarization and language detection",
+      "Built a real-time meeting translator desktop app using Electron and Azure Speech SDK that enables multilingual meeting participation through live transcription overlays",
     ],
-    status: "current",
+    status: "completed",
   },
   {
     company: "Mysty",

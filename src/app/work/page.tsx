@@ -36,7 +36,7 @@ export default function WorkPage() {
     title: exp.duration,
     content: (
       <div className="mb-8" key={exp.company}>
-        <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
+        <div className="bg-linear-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
@@ -112,7 +112,7 @@ export default function WorkPage() {
                   key={index}
                   className="flex items-start gap-3 text-gray-300 text-sm"
                 >
-                  <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 shrink-0" />
                   <span>{achievement}</span>
                 </li>
               ))}
@@ -147,11 +147,11 @@ export default function WorkPage() {
 
         <header className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
               Work Experience
             </h1>
           </div>
-          <div className="mt-6 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent" />
+          <div className="mt-6 h-px bg-linear-to-r from-transparent via-gray-600 to-transparent" />
         </header>
 
         <div className="relative hidden md:block">
@@ -161,7 +161,7 @@ export default function WorkPage() {
         <div className="block md:hidden space-y-8">
           {work.map((exp) => (
             <div key={exp.company} className="mb-8">
-              <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
+              <div className="bg-linear-to-br from-gray-900 via-black to-gray-900 rounded-2xl p-6 border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300">
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
                     <Avatar className="size-6">
@@ -234,7 +234,7 @@ export default function WorkPage() {
                         key={index}
                         className="flex items-start gap-2 text-gray-300 text-xs"
                       >
-                        <div className="w-1 h-1 bg-blue-400 rounded-full mt-1.5 flex-shrink-0" />
+                        <div className="w-1 h-1 bg-blue-400 rounded-full mt-1.5 shrink-0" />
                         <span>{achievement}</span>
                       </li>
                     ))}

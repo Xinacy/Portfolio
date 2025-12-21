@@ -91,7 +91,7 @@ export default function NotFound() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.div
-                  className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-indigo-600 via-black-600 to-indigo-600 bg-clip-text text-transparent relative"
+                  className="text-8xl md:text-9xl font-bold bg-linear-to-r from-indigo-600 via-black-600 to-indigo-600 bg-clip-text text-transparent relative"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}

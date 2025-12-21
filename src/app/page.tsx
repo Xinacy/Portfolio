@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black relative">
       <div className="lg:h-screen flex">
-        <div className="hidden lg:flex w-80 xl:w-96 flex-shrink-0 p-8 items-center justify-center">
+        <div className="hidden lg:flex w-80 xl:w-96 shrink-0 p-8 items-center justify-center">
           <CometCard className="w-full max-w-md">
             <div className="bg-[#1A1A1A] rounded-xl border p-6 shadow-2xl w-full">
               <ProfileCardContent />
@@ -77,7 +77,7 @@ export default function Home() {
                       disabled={false}
                       proximity={100}
                       inactiveZone={0.01}
-                      className="border-[1px]"
+                      className="border"
                     />
                     <CardContent>
                       <div className="flex items-center justify-between">
@@ -107,7 +107,7 @@ export default function Home() {
                   </Card>
                   {index !== work.length - 1 && (
                     <div className="flex items-center justify-center py-5">
-                      <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+                      <div className="w-full h-px bg-linear-to-r from-transparent via-gray-500 to-transparent"></div>
                     </div>
                   )}
                 </div>

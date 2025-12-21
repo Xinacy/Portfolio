@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import DownloadButton from "@/components/ResumeDownload";
 import { Metadata } from "next";
+import work from "@/lib/work";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xinacy.com/"),
@@ -79,14 +80,21 @@ export default function ResumePage() {
               <span className="flex items-center gap-1">
                 <MapPin className="size-4 text-gray-400" /> India
               </span>
-              <span className="flex items-center gap-1">
+              <a
+                href="mailto:gaurav@xinacy.com"
+                className="flex items-center gap-1 hover:text-white transition-colors"
+              >
                 <Mail className="size-4 text-gray-400" />
                 gaurav@xinacy.com
-              </span>
-              <span className="flex items-center gap-1">
+              </a>
+              <a
+                href="https://linkedin.com/in/Xinacy"
+                target="_blank"
+                className="flex items-center gap-1 hover:text-white transition-colors"
+              >
                 <Linkedin className="w-4 h-4 text-gray-400" />
                 in/Xinacy
-              </span>
+              </a>
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4 text-gray-400" />
                 xinacy.com
@@ -113,217 +121,33 @@ export default function ResumePage() {
             </h2>
 
             <div className="space-y-6">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">
-                      AI/ML Engineer
-                    </h3>
-                    <h4 className="text-lg font-semibold text-gray-400">
-                      Tryzent Technologies
-                    </h4>
-                  </div>
-                  <div className="text-right text-sm">
-                    <div className="font-medium text-gray-300">
-                      July 2025 - Present
+              {work.map((exp) => (
+                <div key={exp.company}>
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold text-white">
+                        {exp.position}
+                      </h3>
+                      <h4 className="text-lg font-semibold text-gray-400">
+                        {exp.company}
+                      </h4>
                     </div>
-                    <div className="text-gray-500">Remote (Delhi, India)</div>
-                  </div>
-                </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>
-                    Developed an agentic workflow using LangGraph to summarize
-                    Zoom meetings via the Zoom Real-Time Messaging System.
-                  </li>
-                  <li>
-                    Built a document extraction pipeline using LlamaIndex to
-                    assist GST filings by extracting key data from invoices and
-                    bank statements.
-                  </li>
-                  <li>
-                    Developed an AI tool using LangGraph & LlamaCloud to analyze
-                    resumes against job descriptions and optimize ATS scores.
-                  </li>
-                  <li>
-                    Integrated automated PDF editing and a job search feature
-                    with location and remote filters.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Founder</h3>
-                    <h4 className="text-lg font-semibold text-gray-400">
-                      Mysty
-                    </h4>
-                  </div>
-                  <div className="text-right text-sm">
-                    <div className="font-medium text-gray-300">
-                      February 2025 - June 2025
+                    <div className="text-right text-sm">
+                      <div className="font-medium text-gray-300">
+                        {exp.duration}
+                      </div>
+                      {exp.location && (
+                        <div className="text-gray-500">{exp.location}</div>
+                      )}
                     </div>
                   </div>
+                  <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
+                    {exp.achievements.map((achievement, index) => (
+                      <li key={index}>{achievement}</li>
+                    ))}
+                  </ul>
                 </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>
-                    Served a small user base (1M+ users, 100+ orgs) with
-                    scalable, high-performance architecture.
-                  </li>
-                  <li>
-                    Tech stack used: discord.py, PostgreSQL, websockets,
-                    Tortoise-ORM, Redis, Docker & more.
-                  </li>
-                  <li>
-                    Integrated Discord Oauth2 for user login on web dashboard
-                    using FastAPI, JWT & PostgreSQL.
-                  </li>
-                  <li>
-                    Payment gateways integrated: Stripe, Oxapay and Paypal.
-                  </li>
-                  <li>
-                    Dashboard built on Next.js, FastAPI and Websockets with
-                    Webhooks to receive payments from the payment gateways.
-                  </li>
-                  <li>
-                    The project was discontinued due to financial constraints
-                    and lack of sustained funding.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Co-Founder</h3>
-                    <h4 className="text-lg font-semibold text-gray-400">
-                      Quotient
-                    </h4>
-                  </div>
-                  <div className="text-right text-sm">
-                    <div className="font-medium text-gray-300">
-                      September 2020 - April 2025
-                    </div>
-                  </div>
-                </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>
-                    Served a large user base (10M+ users, 15k+ orgs) with
-                    scalable, high-performance architecture.
-                  </li>
-                  <li>
-                    Tech stack used: discord.py, React, FastAPI, PostgreSQL,
-                    websockets, Tortoise-ORM & more.
-                  </li>
-                  <li>
-                    Integrated Discord Oauth2 for user login on web dashboard
-                    using FastAPI, JWT & PostgreSQL.
-                  </li>
-                  <li>
-                    Payment gateway integrated: PayuMoney Payment Gateway.
-                  </li>
-                  <li>
-                    Built an OCR and Image hashing microservice using
-                    Pytesseract, Imagehash, PIL, and other technologies.
-                    (handles 100k+ hits/month).
-                  </li>
-                  <li>
-                    Project discontinued in April 2025 due to the untimely
-                    passing of a core team member.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Founder</h3>
-                    <h4 className="text-lg font-semibold text-gray-400">
-                      Flantic
-                    </h4>
-                  </div>
-                  <div className="text-right text-sm">
-                    <div className="font-medium text-gray-300">
-                      March 2021 - March 2023
-                    </div>
-                  </div>
-                </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>
-                    Served a large user base (55M+ users, 200k+ orgs) with
-                    scalable, high-performance architecture.
-                  </li>
-                  <li>
-                    Tech stack used: discord.py, PostgreSQL, websockets,
-                    Tortoise-ORM & more.
-                  </li>
-                  <li>Payment gateway integrated: Razorpay Payment Gateway.</li>
-                  <li>
-                    Horizontally scaled the bot up to 200k servers using PM2.
-                  </li>
-                  <li>Acquired by Green Bot Development in 2023.</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
-              PROJECT
-            </h2>
-
-            <div className="space-y-6">
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-white">
-                    Crypto Payout Bot
-                  </h3>
-                  <div className="text-sm font-medium text-gray-300">
-                    October 2024 - October 2024
-                  </div>
-                </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>
-                    A freelance project for a European Twitch streamer client.
-                  </li>
-                  <li>
-                    This bot uses Oxapay payment gateway to facilitate crypto
-                    transactions.
-                  </li>
-                  <li>It provides live transaction info and wallet balance.</li>
-                  <li>
-                    It handled over $32k$ in payouts and over 500+ paid
-                    participants.
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl font-bold text-white">
-                    HTTP-Interaction Bot Template
-                  </h3>
-                  <div className="text-sm font-medium text-gray-300">
-                    September 2023 - September 2023
-                  </div>
-                </div>
-                <ul className="list-disc ml-5 space-y-1 text-sm text-gray-300">
-                  <li>A template repository for discord http interactions.</li>
-                  <li>
-                    It can be hosted on server-less architecture like Vercel
-                    with no expenses.
-                  </li>
-                  <li>It has custom command handler making use of FastAPI.</li>
-                  <li>
-                    It handles proper authentication logic by verifying the
-                    signature through request headers.
-                  </li>
-                  <li>
-                    This project is no longer maintained and has been archived
-                    due to inactivity.
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
           </section>
 
@@ -353,7 +177,7 @@ export default function ResumePage() {
               <div>
                 <strong className="text-white">Library/Frameworks:</strong>{" "}
                 React, Next.js, TailwindCSS, FastAPI, Express, Tortoise-ORM,
-                websockets, discord.py
+                websockets, discord.py, Electron
               </div>
               <div>
                 <strong className="text-white">AI/LLM Frameworks:</strong>{" "}
