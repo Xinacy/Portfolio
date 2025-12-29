@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         <div className="flex-1 overflow-y-auto">
-          <div className="max-w-4xl mx-auto px-8 py-12 pb-24 lg:pb-32">
+          <div className="max-w-4xl mx-auto px-8 py-12 pb-28 lg:pb-32">
             <CometCard className="block lg:hidden mb-8 sm:mb-12 mt-6 sm:mt-10 w-full max-w-md mx-auto">
               <div className="bg-[#1A1A1A] rounded-xl border p-4 sm:p-6 shadow-2xl w-full">
                 <ProfileCardContent />
@@ -243,7 +243,7 @@ function ProfileCardContent() {
       <div className="flex justify-center gap-3 mb-6">
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://instagram.com/Xinacy7"
+            href="https://instagram.com/Xinacy_7"
             target="_blank"
             rel="noopener noreferrer"
           >
