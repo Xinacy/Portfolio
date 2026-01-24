@@ -16,12 +16,12 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-export const viewport: Viewport = { themeColor: "#00E676" };
+export const viewport: Viewport = { themeColor: "#FF69B4" }; // Hot Pink for Gay Pride 🏳️‍🌈
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xinacy.com/"),
-  title: "Intro | Gaurav",
-  description: "yet another swe portfolio on the internet",
+  title: "🏳️‍🌈 Gaurav | Professional Gay & Chief Slay Officer",
+  description: "serving looks, slaying code, and spreading the gay agenda ✨💅",
   icons: {
     icon: ["/favicon.ico"],
     apple: ["/apple-touch-icon.png"],
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://xinacy.com/",
-    title: "Intro | Gaurav",
-    description: "yet another swe portfolio on the internet",
+    title: "🏳️‍🌈 Gaurav | Professional Gay",
+    description: "serving looks, slaying code, and spreading the gay agenda ✨💅",
   },
   twitter: {
     card: "summary",
-    title: "Intro | Gaurav",
-    description: "yet another swe portfolio on the internet",
+    title: "🏳️‍🌈 Gaurav | Professional Gay",
+    description: "serving looks, slaying code, and spreading the gay agenda ✨💅",
     creator: "@Xinacy",
   },
 };
@@ -48,30 +48,30 @@ export default async function RootLayout({
 }) {
   const dockItems = [
     {
-      title: "Home",
+      title: "Gay HQ 🏠",
       icon: (
-        <HomeIcon className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <HomeIcon className="h-full w-full text-red-400" />
       ),
       href: "/",
     },
     {
-      title: "Work",
+      title: "Gay Journey 💼",
       icon: (
-        <Briefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Briefcase className="h-full w-full text-orange-400" />
       ),
       href: "/work",
     },
     {
-      title: "Resume",
+      title: "Gay Resume 📄",
       icon: (
-        <FileText className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <FileText className="h-full w-full text-yellow-400" />
       ),
       href: "/resume",
     },
     {
-      title: "Contact",
+      title: "Slide Into DMs 💌",
       icon: (
-        <Mail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Mail className="h-full w-full text-pink-400" />
       ),
       href: "mailto:gaurav@xinacy.com",
     },

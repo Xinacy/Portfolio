@@ -143,3 +143,216 @@
     cursor: pointer;
   }
 }
+
+/* 🏳️‍🌈 PRIDE RAINBOW ANIMATIONS 🏳️‍🌈 */
+
+/* Rainbow gradient text animation */
+@keyframes rainbow-text {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0080ff, #8000ff, #ff0080, #ff0000
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-text 4s ease infinite;
+}
+
+/* Animated rainbow border */
+@keyframes rainbow-border {
+  0% { border-color: #ff0000; }
+  14% { border-color: #ff8000; }
+  28% { border-color: #ffff00; }
+  42% { border-color: #00ff00; }
+  57% { border-color: #00ffff; }
+  71% { border-color: #0080ff; }
+  85% { border-color: #8000ff; }
+  100% { border-color: #ff0000; }
+}
+
+.rainbow-border {
+  animation: rainbow-border 3s linear infinite;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Rainbow glow effect */
+@keyframes rainbow-glow {
+  0% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff000080; }
+  14% { box-shadow: 0 0 20px #ff8000, 0 0 40px #ff800080; }
+  28% { box-shadow: 0 0 20px #ffff00, 0 0 40px #ffff0080; }
+  42% { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff0080; }
+  57% { box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff80; }
+  71% { box-shadow: 0 0 20px #0080ff, 0 0 40px #0080ff80; }
+  85% { box-shadow: 0 0 20px #8000ff, 0 0 40px #8000ff80; }
+  100% { box-shadow: 0 0 20px #ff0000, 0 0 40px #ff000080; }
+}
+
+.rainbow-glow {
+  animation: rainbow-glow 3s linear infinite;
+}
+
+/* Pride flag background gradient */
+.pride-gradient {
+  background: linear-gradient(
+    180deg,
+    #ff0000 0%,
+    #ff8000 16.66%,
+    #ffff00 33.33%,
+    #00ff00 50%,
+    #0080ff 66.66%,
+    #8000ff 83.33%,
+    #ff0080 100%
+  );
+}
+
+/* Animated pride background */
+@keyframes pride-bg-move {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.pride-bg-animated {
+  background: linear-gradient(
+    180deg,
+    #ff000040, #ff800040, #ffff0040, #00ff0040, #00ffff40, #0080ff40, #8000ff40, #ff008040, #ff000040
+  );
+  background-size: 100% 800%;
+  animation: pride-bg-move 5s ease infinite;
+}
+
+/* Sparkle animation for pride elements */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Progress pride flag colors */
+.progress-pride-gradient {
+  background: linear-gradient(
+    90deg,
+    #000000, #784F17, #E40303, #FF8C00, #FFED00, #008026, #24408E, #732982
+  );
+}
+
+/* Rainbow button hover */
+.rainbow-button {
+  background: linear-gradient(
+    90deg,
+    #ff0000, #ff8000, #ffff00, #00ff00, #00ffff, #0080ff, #8000ff, #ff0080
+  );
+  background-size: 400% 100%;
+  transition: all 0.3s ease;
+}
+
+.rainbow-button:hover {
+  animation: rainbow-text 2s ease infinite;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.5);
+}
+
+/* Floating hearts animation */
+@keyframes float-up {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+.float-heart {
+  animation: float-up 3s ease-out forwards;
+}
+
+/* Trans pride colors */
+.trans-pride-text {
+  background: linear-gradient(90deg, #5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-text 4s ease infinite;
+}
+
+/* Bi pride colors */
+.bi-pride-text {
+  background: linear-gradient(90deg, #D60270, #9B4F96, #0038A8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Pan pride colors */
+.pan-pride-text {
+  background: linear-gradient(90deg, #FF1B8D, #FFD800, #1BB3FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Non-binary pride colors */
+.nb-pride-text {
+  background: linear-gradient(90deg, #FCF434, #FFFFFF, #9C59D1, #2D2D2D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gay/MLM pride colors */
+.gay-pride-text {
+  background: linear-gradient(90deg, #078D70, #26CEAA, #98E8C1, #FFFFFF, #7BADE2, #5049CC, #3D1A78);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-text 4s ease infinite;
+}
+
+/* Pulse rainbow shadow */
+@keyframes pulse-rainbow {
+  0%, 100% { 
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff000040;
+    border-color: #ff0000;
+  }
+  25% { 
+    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff0040;
+    border-color: #00ff00;
+  }
+  50% { 
+    box-shadow: 0 0 20px #0080ff, 0 0 40px #0080ff40;
+    border-color: #0080ff;
+  }
+  75% { 
+    box-shadow: 0 0 20px #ff0080, 0 0 40px #ff008040;
+    border-color: #ff0080;
+  }
+}
+
+.pulse-rainbow {
+  animation: pulse-rainbow 4s ease infinite;
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Disco ball shimmer */
+@keyframes disco {
+  0%, 100% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.disco-effect {
+  animation: disco 5s linear infinite;
+}
+
+/* Glitter cursor trail */
+.pride-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E🌈%3C/text%3E%3C/svg%3E"), auto;
+}

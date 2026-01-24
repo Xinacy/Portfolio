@@ -8,7 +8,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { CometCard } from "@/components/ui/comet-card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Home, ArrowLeft, Zap, Sparkles } from "lucide-react";
+import { Home, ArrowLeft, Zap, Sparkles, Heart } from "lucide-react";
 
 export default function NotFound() {
   const [count, setCount] = useState(15);
@@ -51,27 +51,51 @@ export default function NotFound() {
   if (!mounted) return null;
 
   return (
-    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+    <div className="min-h-screen w-full bg-black flex items-center justify-center p-4 relative overflow-hidden pride-bg-animated pride-cursor">
+      {/* Floating Pride Emojis */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {['🏳️‍🌈', '🌈', '💖', '💜', '💙', '🦄', '✨', '🏳️‍⚧️', '💕', '🌸', '👑', '💅', '🎀', '🌟'].map((emoji, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white/40 rounded-full"
+            className="absolute text-3xl"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
               opacity: 0,
             }}
             animate={{
-              y: [null, -100],
+              y: [null, -150],
               opacity: [0, 1, 0],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: Math.random() * 4 + 3,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+            }}
+          />
+        ))}
+        {['🏳️‍🌈', '🌈', '💖', '💜', '💙', '🦄', '✨', '🏳️‍⚧️', '💕', '🌸', '👑', '💅', '🎀', '🌟'].map((emoji, i) => (
+          <motion.div
+            key={`emoji-${i}`}
+            className="absolute text-2xl"
+            initial={{
+              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+              opacity: 0.8,
+            }}
+            animate={{
+              y: [null, -100],
+              opacity: [0.8, 1, 0],
             }}
             transition={{
               duration: Math.random() * 3 + 2,
               repeat: Infinity,
               delay: Math.random() * 2,
             }}
-          />
+          >
+            {emoji}
+          </motion.div>
         ))}
       </div>
 
@@ -82,7 +106,7 @@ export default function NotFound() {
         className="relative z-10 w-full max-w-2xl"
       >
         <CometCard>
-          <div className="bg-black backdrop-blur-sm p-10 rounded-2xl border border-gray-200/50">
+          <div className="bg-black backdrop-blur-sm p-10 rounded-2xl rainbow-border rainbow-glow">
             <div className="text-center space-y-8">
               <motion.div
                 className="relative"
@@ -91,7 +115,7 @@ export default function NotFound() {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.div
-                  className="text-8xl md:text-9xl font-bold bg-linear-to-r from-indigo-600 via-black-600 to-indigo-600 bg-clip-text text-transparent relative"
+                  className="text-8xl md:text-9xl font-bold rainbow-text relative"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -109,25 +133,38 @@ export default function NotFound() {
                       ease: "easeInOut",
                     }}
                   >
-                    <Sparkles className="w-8 h-8 text-blue-600" />
+                    <span className="text-4xl">🏳️‍🌈</span>
+                  </motion.div>
+                  <motion.div
+                    className="absolute -bottom-2 -left-4"
+                    animate={{
+                      rotate: [0, -360],
+                      scale: [1, 1.3, 1],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <Sparkles className="w-8 h-8 text-pink-500 sparkle" />
                   </motion.div>
                 </motion.div>
               </motion.div>
 
               <TextGenerateEffect
-                words="Oops! This page has wandered off into the digital void"
-                className="text-2xl md:text-3xl text-center text-gray-800"
+                words="Oh no bestie! This page has gone to a fabulous place we can't find 💅🌈"
+                className="text-2xl md:text-3xl text-center rainbow-text"
                 duration={0.8}
               />
 
               <motion.p
-                className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto"
+                className="trans-pride-text text-lg leading-relaxed max-w-md mx-auto font-semibold"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 1.5 }}
               >
-                Don&apos;t worry though, we&apos;ll help you find your way back
-                to something amazing.
+                Don&apos;t worry queen, we&apos;ll get you back to somewhere iconic ✨
               </motion.p>
 
               <motion.div
@@ -136,14 +173,16 @@ export default function NotFound() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2 }}
               >
-                <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-                  <Zap className="w-4 h-4" />
-                  <span>Auto-redirecting in {count} seconds</span>
+                <div className="flex items-center justify-center gap-2 text-sm rainbow-text font-bold">
+                  <Zap className="w-4 h-4 text-yellow-400 sparkle" />
+                  <span>Yeeting you back in {count} seconds 🌈</span>
                 </div>
-                <Progress
-                  value={progressValue}
-                  className="w-full max-w-xs mx-auto"
-                />
+                <div className="w-full max-w-xs mx-auto h-3 rounded-full overflow-hidden rainbow-border">
+                  <div
+                    className="h-full pride-gradient transition-all duration-300"
+                    style={{ width: `${progressValue}%` }}
+                  />
+                </div>
               </motion.div>
 
               <motion.div
@@ -155,7 +194,7 @@ export default function NotFound() {
                 <Button
                   onClick={handleManualRedirect}
                   size="lg"
-                  className="group relative overflow-hidden"
+                  className="group relative overflow-hidden rainbow-button text-white font-bold border-0"
                 >
                   <motion.div
                     className="flex items-center gap-2"
@@ -163,7 +202,7 @@ export default function NotFound() {
                     transition={{ type: "spring", stiffness: 400 }}
                   >
                     <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                    Take me back
+                    Slay me back 💅
                   </motion.div>
                 </Button>
 
@@ -171,7 +210,7 @@ export default function NotFound() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="group relative overflow-hidden"
+                    className="group relative overflow-hidden rainbow-border hover:rainbow-glow"
                   >
                     <motion.div
                       className="flex items-center gap-2"
@@ -179,10 +218,22 @@ export default function NotFound() {
                       transition={{ type: "spring", stiffness: 400 }}
                     >
                       <Home className="w-4 h-4 transition-transform group-hover:scale-110" />
-                      Go home
+                      <span className="rainbow-text font-bold">Go to Gay HQ 🏠</span>
                     </motion.div>
                   </Button>
                 </Link>
+              </motion.div>
+
+              <motion.div
+                className="flex items-center justify-center gap-2 pt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 3 }}
+              >
+                <span className="rainbow-text text-sm font-bold">Made with</span>
+                <Heart className="size-4 text-pink-500 fill-current sparkle" />
+                <span className="rainbow-text text-sm font-bold">and Gay Pride</span>
+                <span className="sparkle">🏳️‍🌈</span>
               </motion.div>
             </div>
           </div>

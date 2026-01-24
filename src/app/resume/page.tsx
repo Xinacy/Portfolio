@@ -8,6 +8,8 @@ import {
   Linkedin,
   Globe,
   MapPin,
+  Sparkles,
+  Heart,
 } from "lucide-react";
 import DownloadButton from "@/components/ResumeDownload";
 import { Metadata } from "next";
@@ -15,8 +17,8 @@ import work from "@/lib/work";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xinacy.com/"),
-  title: "Resume | Gaurav",
-  description: "i have a resume but pdfs are boring",
+  title: "Gay Resume 🏳️‍🌈 | Gaurav",
+  description: "my resume but make it ✨gay✨",
   icons: {
     icon: ["/favicon.ico"],
     apple: ["/apple-touch-icon.png"],
@@ -25,13 +27,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://xinacy.com/",
-    title: "Resume | Gaurav",
-    description: "i have a resume but pdfs are boring",
+    title: "Gay Resume 🏳️‍🌈 | Gaurav",
+    description: "my resume but make it ✨gay✨",
   },
   twitter: {
     card: "summary",
-    title: "Resume | Gaurav",
-    description: "i have a resume but pdfs are boring",
+    title: "Gay Resume 🏳️‍🌈 | Gaurav",
+    description: "my resume but make it ✨gay✨",
     creator: "@Xinacy",
   },
 };
@@ -40,84 +42,90 @@ export default function ResumePage() {
   const resumeUrl = "https://cdn.xinacy.com/resume.pdf";
 
   return (
-    <div className="min-h-screen bg-black pb-28">
+    <div className="min-h-screen bg-black pb-28 pride-bg-animated pride-cursor">
       <div className="max-w-5xl mx-auto px-6 py-6 sm:py-8">
         <div className="mb-6">
           <Button
             variant="outline"
-            className="bg-transparent border-gray-600/50"
+            className="rainbow-border hover:rainbow-glow"
             asChild
           >
             <Link href="/" aria-label="Back to home">
               <ChevronLeft className="size-4" />
-              Back to home
+              <span className="rainbow-text font-bold">Back to Gay HQ 🏳️‍🌈</span>
             </Link>
           </Button>
         </div>
 
         <header className="mb-6 sm:mb-8 text-center">
-          <h1 className="text-3xl font-bold mb-2">Resume</h1>
+          <h1 className="rainbow-text text-3xl font-bold mb-2 flex items-center justify-center gap-2">
+            <Sparkles className="size-8 text-pink-400 sparkle" />
+            Gay Resume
+            <Sparkles className="size-8 text-pink-400 sparkle" />
+          </h1>
 
           <div className="flex flex-wrap gap-3 justify-center">
             <DownloadButton />
             <Button
               variant="outline"
-              className="bg-transparent border-gray-600/50"
+              className="rainbow-border hover:rainbow-glow"
               asChild
             >
               <Link href={resumeUrl} target="_blank">
                 <ExternalLink className="size-4" />
-                Open in new tab
+                <span className="rainbow-text">Open in new tab</span>
               </Link>
             </Button>
           </div>
         </header>
 
-        <div className="max-w-4xl mx-auto bg-black text-white rounded-lg shadow-2xl p-8 md:p-12 border border-gray-700">
+        <div className="max-w-4xl mx-auto bg-black text-white rounded-lg shadow-2xl p-8 md:p-12 rainbow-border rainbow-glow">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 text-white">Gaurav</h1>
+            <h1 className="rainbow-text text-5xl font-bold mb-4">Gaurav 🦄</h1>
+            <p className="trans-pride-text text-xl font-bold mb-4">Professional Gay | Chief Fabulousness Officer</p>
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-300">
-              <span className="flex items-center gap-1">
-                <MapPin className="size-4 text-gray-400" /> India
+              <span className="flex items-center gap-1 rainbow-text">
+                <MapPin className="size-4 text-pink-400" /> Gay Agenda HQ 🏳️‍🌈
               </span>
               <a
                 href="mailto:gaurav@xinacy.com"
-                className="flex items-center gap-1 hover:text-white transition-colors"
+                className="flex items-center gap-1 trans-pride-text hover:opacity-80 transition-colors"
               >
-                <Mail className="size-4 text-gray-400" />
+                <Mail className="size-4 text-blue-400" />
                 gaurav@xinacy.com
               </a>
               <a
                 href="https://linkedin.com/in/Xinacy"
                 target="_blank"
-                className="flex items-center gap-1 hover:text-white transition-colors"
+                className="flex items-center gap-1 bi-pride-text hover:opacity-80 transition-colors"
               >
-                <Linkedin className="w-4 h-4 text-gray-400" />
+                <Linkedin className="w-4 h-4 text-purple-400" />
                 in/Xinacy
               </a>
-              <span className="flex items-center gap-1">
-                <Globe className="w-4 h-4 text-gray-400" />
+              <span className="flex items-center gap-1 pan-pride-text">
+                <Globe className="w-4 h-4 text-yellow-400" />
                 xinacy.com
               </span>
             </div>
           </div>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
-              SUMMARY
+            <h2 className="rainbow-text text-2xl font-bold mb-4 border-b-2 pride-gradient pb-1">
+              🌈 WHO I AM (VERY GAY)
             </h2>
             <p className="leading-relaxed text-gray-300">
-              Experienced software developer proficient in Python, JavaScript,
-              TypeScript, and React, with a strong foundation in DevOps. Skilled
-              in building scalable web and real-time applications, with
-              expertise in payment gateway integrations, microservices, and
-              system optimizations.
+              Certified <span className="rainbow-text font-bold">Professional Gay™</span> with expertise in slaying code,
+              spreading the gay agenda, and making every codebase{" "}
+              <span className="trans-pride-text font-bold">fabulously queer</span>.
+              Skilled in being iconic, serving looks, and turning heteronormative software into a
+              <span className="bi-pride-text font-bold"> pride parade</span>.
+              Currently accepting offers from companies with excellent rainbow lighting. 💅✨
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
-              EXPERIENCE
+            <h2 className="rainbow-text text-2xl font-bold mb-4 border-b-2 pride-gradient pb-1">
+              💼 GAY EXPERIENCE
             </h2>
 
             <div className="space-y-6">
@@ -125,19 +133,19 @@ export default function ResumePage() {
                 <div key={exp.company}>
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="text-xl font-bold text-white">
+                      <h3 className="text-xl font-bold trans-pride-text">
                         {exp.position}
                       </h3>
-                      <h4 className="text-lg font-semibold text-gray-400">
+                      <h4 className="text-lg font-semibold rainbow-text">
                         {exp.company}
                       </h4>
                     </div>
                     <div className="text-right text-sm">
-                      <div className="font-medium text-gray-300">
+                      <div className="font-medium bi-pride-text">
                         {exp.duration}
                       </div>
                       {exp.location && (
-                        <div className="text-gray-500">{exp.location}</div>
+                        <div className="pan-pride-text">{exp.location}</div>
                       )}
                     </div>
                   </div>
@@ -152,55 +160,63 @@ export default function ResumePage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
-              EDUCATION
+            <h2 className="rainbow-text text-2xl font-bold mb-4 border-b-2 pride-gradient pb-1">
+              🎓 GAY EDUCATION
             </h2>
             <div>
-              <h3 className="text-xl font-bold text-white">
-                Bachelor of Technology in Computer Science (AI & ML)
+              <h3 className="text-xl font-bold trans-pride-text">
+                Bachelor of Being Fabulous (in Gay & Slaying)
               </h3>
-              <p className="text-gray-400">
-                Maharshi Dayanand University · Haryana · 2026
+              <p className="bi-pride-text">
+                The School of Life · Everywhere · Since Forever
+              </p>
+              <p className="text-gray-400 text-sm mt-2">
+                Minor in Professional Shade Throwing · GPA: Iconic/Iconic 💅
               </p>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
-              SKILLS
+            <h2 className="rainbow-text text-2xl font-bold mb-4 border-b-2 pride-gradient pb-1">
+              ✨ GAY SKILLS
             </h2>
-            <div className="space-y-2 text-sm text-gray-300">
+            <div className="space-y-3 text-sm text-gray-300">
               <div>
-                <strong className="text-white">Languages:</strong> Python,
-                JavaScript, TypeScript, HTML, CSS, SQL.
+                <strong className="rainbow-text">Being Gay:</strong>{" "}
+                Professional Level, Expert, Master Certified 🏳️‍🌈
               </div>
               <div>
-                <strong className="text-white">Library/Frameworks:</strong>{" "}
-                React, Next.js, TailwindCSS, FastAPI, Express, Tortoise-ORM,
-                websockets, discord.py, Electron
+                <strong className="trans-pride-text">Slaying:</strong>{" "}
+                Code, Looks, Presentations, Life Goals, The Patriarchy ✨
               </div>
               <div>
-                <strong className="text-white">AI/LLM Frameworks:</strong>{" "}
-                LangChain, LlamaIndex, LangGraph, Hugging Face, OpenAI API.
+                <strong className="bi-pride-text">Spreading Joy:</strong>{" "}
+                Hugs, Compliments, Positive Vibes, Glitter (non-biodegradable, sorry) 💖
               </div>
               <div>
-                <strong className="text-white">Database:</strong> PostgreSQL,
-                MongoDB.
+                <strong className="pan-pride-text">Languages:</strong>{" "}
+                Gay, Fluent Sarcasm, Python, TypeScript, Love 💕
               </div>
               <div>
-                <strong className="text-white">DevOps:</strong> Sentry,
-                Prometheus, Grafana, Loki, Docker, Kubernetes, Jenkins.
+                <strong className="gay-pride-text">Frameworks:</strong>{" "}
+                React, Next.js, The Gay Agenda, Self-Love, Radical Acceptance
               </div>
               <div>
-                <strong className="text-white">Others:</strong> Redis, Nginx,
-                Caddy, Traefik, Kafka, Amazon S3, Cloudflare R2.
+                <strong className="nb-pride-text">Tools:</strong>{" "}
+                Eyebrow Tweezers, Git, Docker, Excellent Taste, Rainbow Flags
               </div>
             </div>
           </section>
+
+          <div className="mt-8 p-4 bg-[#1A1A1A] rounded-lg rainbow-border text-center">
+            <p className="rainbow-text font-bold text-lg">
+              References available upon request (they&apos;re all my friends and they think I&apos;m fabulous) 💅
+            </p>
+          </div>
         </div>
 
-        <p className="text-center text-xs text-gray-500 mt-4">
-          For the original PDF version, use the download button above.
+        <p className="text-center text-xs rainbow-text mt-4 font-bold flex items-center justify-center gap-2">
+          Made with <Heart className="size-4 text-pink-500 fill-current sparkle" /> and Gay Pride 🏳️‍🌈
         </p>
       </div>
     </div>
