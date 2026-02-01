@@ -295,7 +295,7 @@ function ProfileCardContent() {
       <div className="flex justify-center gap-3 mb-6">
         <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
           <Link
-            href="https://instagram.com/Xinacy_7"
+            href="https://instagram.com/Xinacy7"
             target="_blank"
             rel="noopener noreferrer"
           >
