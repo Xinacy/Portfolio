@@ -23,20 +23,22 @@ export default function Home() {
     <main className="min-h-screen bg-black relative pride-bg-animated pride-cursor">
       {/* Floating Pride Emojis */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        {['🏳️‍🌈', '🌈', '💖', '💜', '💙', '🦄', '✨', '🏳️‍⚧️', '💕', '🌸'].map((emoji, i) => (
-          <div
-            key={i}
-            className="absolute text-2xl animate-bounce"
-            style={{
-              left: `${(i * 10) + 5}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-            }}
-          >
-            {emoji}
-          </div>
-        ))}
+        {["🏳️‍🌈", "🌈", "💖", "💜", "💙", "🦄", "✨", "🏳️‍⚧️", "💕", "🌸"].map(
+          (emoji, i) => (
+            <div
+              key={i}
+              className="absolute text-2xl animate-bounce"
+              style={{
+                left: `${i * 10 + 5}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${i * 0.3}s`,
+                animationDuration: `${2 + Math.random() * 2}s`,
+              }}
+            >
+              {emoji}
+            </div>
+          ),
+        )}
       </div>
 
       <div className="lg:h-screen flex relative z-10">
@@ -71,14 +73,24 @@ export default function Home() {
                 <h3 className="gay-pride-text text-2xl sm:text-3xl lg:text-4xl font-bold">
                   Professional Gay 🌈
                 </h3>
-                <p className="trans-pride-text text-lg sm:text-xl font-semibold">Based in the Gay Agenda&apos;s Headquarters 💖</p>
+                <p className="trans-pride-text text-lg sm:text-xl font-semibold">
+                  Based in the Gay Agenda&apos;s Headquarters 💖
+                </p>
               </div>
 
               <p className="text-white text-base sm:text-lg leading-relaxed max-w-3xl">
-                tldr; i write <span className="rainbow-text font-bold">fabulously gay code</span>, spread the{" "}
-                <span className="bi-pride-text font-bold">gay agenda</span>, and make every pixel{" "}
-                <span className="pan-pride-text font-bold">sparkle with pride</span>.
-                currently serving: hot takes, good vibes, and code that slays ✨💅
+                tldr; i write{" "}
+                <span className="rainbow-text font-bold">
+                  fabulously gay code
+                </span>
+                , spread the{" "}
+                <span className="bi-pride-text font-bold">gay agenda</span>, and
+                make every pixel{" "}
+                <span className="pan-pride-text font-bold">
+                  sparkle with pride
+                </span>
+                . currently serving: hot takes, good vibes, and code that slays
+                ✨💅
               </p>
             </div>
 
@@ -86,24 +98,59 @@ export default function Home() {
             <div className="mb-16">
               <div className="flex items-center mb-8">
                 <Sparkles className="w-6 h-6 text-pink-400 mr-2 sparkle" />
-                <h2 className="rainbow-text text-2xl font-bold">My Gay Superpowers 💪</h2>
+                <h2 className="rainbow-text text-2xl font-bold">
+                  My Gay Superpowers 💪
+                </h2>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   { skill: "Being Gay", emoji: "🏳️‍🌈", color: "rainbow-text" },
-                  { skill: "Slaying Code", emoji: "💅", color: "trans-pride-text" },
-                  { skill: "Serving Looks", emoji: "✨", color: "bi-pride-text" },
-                  { skill: "Spreading Love", emoji: "💖", color: "pan-pride-text" },
-                  { skill: "Making Everything Gay", emoji: "🌈", color: "gay-pride-text" },
-                  { skill: "Reading Homophobes", emoji: "📚", color: "nb-pride-text" },
-                  { skill: "Professional Yas Queen-ing", emoji: "👑", color: "rainbow-text" },
-                  { skill: "Gay Chaos", emoji: "🦄", color: "trans-pride-text" },
+                  {
+                    skill: "Slaying Code",
+                    emoji: "💅",
+                    color: "trans-pride-text",
+                  },
+                  {
+                    skill: "Serving Looks",
+                    emoji: "✨",
+                    color: "bi-pride-text",
+                  },
+                  {
+                    skill: "Spreading Love",
+                    emoji: "💖",
+                    color: "pan-pride-text",
+                  },
+                  {
+                    skill: "Making Everything Gay",
+                    emoji: "🌈",
+                    color: "gay-pride-text",
+                  },
+                  {
+                    skill: "Reading Homophobes",
+                    emoji: "📚",
+                    color: "nb-pride-text",
+                  },
+                  {
+                    skill: "Professional Yas Queen-ing",
+                    emoji: "👑",
+                    color: "rainbow-text",
+                  },
+                  {
+                    skill: "Gay Chaos",
+                    emoji: "🦄",
+                    color: "trans-pride-text",
+                  },
                 ].map((item, index) => (
-                  <Card key={index} className="bg-[#1A1A1A] relative overflow-hidden rainbow-border hover:rainbow-glow transition-all duration-300">
+                  <Card
+                    key={index}
+                    className="bg-[#1A1A1A] relative overflow-hidden rainbow-border hover:rainbow-glow transition-all duration-300"
+                  >
                     <CardContent className="p-4 text-center">
                       <span className="text-3xl sparkle">{item.emoji}</span>
-                      <p className={`${item.color} font-bold mt-2 text-sm`}>{item.skill}</p>
+                      <p className={`${item.color} font-bold mt-2 text-sm`}>
+                        {item.skill}
+                      </p>
                     </CardContent>
                   </Card>
                 ))}
@@ -113,7 +160,9 @@ export default function Home() {
             <div className="mb-16">
               <div className="flex items-center mb-4">
                 <Briefcase className="w-6 h-6 text-pink-400 mr-2" />
-                <h2 className="rainbow-text text-2xl font-bold">My Gay Journey 🦄</h2>
+                <h2 className="rainbow-text text-2xl font-bold">
+                  My Gay Journey 🦄
+                </h2>
               </div>
 
               {work.map((item, index) => (
@@ -165,7 +214,9 @@ export default function Home() {
             <div className="mb-16">
               <div className="flex items-center mb-8">
                 <Code className="w-6 h-6 text-pink-400 mr-2" />
-                <h2 className="rainbow-text text-2xl font-bold">GitHub Activity (Very Gay) 🌈</h2>
+                <h2 className="rainbow-text text-2xl font-bold">
+                  GitHub Activity (Very Gay) 🌈
+                </h2>
               </div>
 
               <CometCard>
@@ -234,7 +285,8 @@ export default function Home() {
             <footer className="mt-16 border-t-2 pride-gradient pt-8">
               <div className="text-center">
                 <p className="rainbow-text mb-4 max-w-lg mx-auto font-bold text-lg">
-                  This portfolio is VERY gay and open source. Star it because you love love! 🏳️‍🌈
+                  This portfolio is VERY gay and open source. Star it because
+                  you love love! 🏳️‍🌈
                 </p>
 
                 <div className="flex items-center justify-center mb-4 gap-2">
@@ -258,7 +310,9 @@ export default function Home() {
                 <div className="flex items-center justify-center gap-1 text-sm">
                   <span className="rainbow-text font-bold">Made with</span>
                   <Heart className="size-4 text-pink-500 fill-current sparkle" />
-                  <span className="rainbow-text font-bold">and Gay Pride by Gaurav</span>
+                  <span className="rainbow-text font-bold">
+                    and Gay Pride by Gaurav
+                  </span>
                   <span className="sparkle">🏳️‍🌈</span>
                 </div>
               </div>
@@ -284,25 +338,42 @@ function ProfileCardContent() {
           priority
         />
         <div className="absolute -top-2 -right-2 text-3xl sparkle">🏳️‍🌈</div>
-        <div className="absolute -bottom-2 -left-2 text-3xl sparkle" style={{ animationDelay: '0.5s' }}>✨</div>
+        <div
+          className="absolute -bottom-2 -left-2 text-3xl sparkle"
+          style={{ animationDelay: "0.5s" }}
+        >
+          ✨
+        </div>
       </div>
 
       <div className="text-center mb-6">
-        <h2 className="rainbow-text text-xl sm:text-2xl font-bold">Gaurav 🦄</h2>
-        <p className="trans-pride-text text-sm font-semibold mt-1">Professional Gay | Chief Slay Officer</p>
+        <h2 className="rainbow-text text-xl sm:text-2xl font-bold">
+          Gaurav 🦄
+        </h2>
+        <p className="trans-pride-text text-sm font-semibold mt-1">
+          Professional Gay | Chief Slay Officer
+        </p>
       </div>
 
       <div className="flex justify-center gap-3 mb-6">
-        <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
+        <Button
+          variant="outline"
+          className="size-10 rainbow-border hover:rainbow-glow"
+          asChild
+        >
           <Link
-            href="https://instagram.com/Xinacy7"
+            href="https://instagram.com/Xiinacy"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Instagram className="size-5 text-pink-400" />
           </Link>
         </Button>
-        <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
+        <Button
+          variant="outline"
+          className="size-10 rainbow-border hover:rainbow-glow"
+          asChild
+        >
           <Link
             href="https://x.com/Xinacy"
             target="_blank"
@@ -311,7 +382,11 @@ function ProfileCardContent() {
             <XIcon className="size-5 text-blue-400" />
           </Link>
         </Button>
-        <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
+        <Button
+          variant="outline"
+          className="size-10 rainbow-border hover:rainbow-glow"
+          asChild
+        >
           <Link
             href="https://github.com/Xinacy"
             target="_blank"
@@ -320,7 +395,11 @@ function ProfileCardContent() {
             <GithubIcon className="size-5 text-purple-400" />
           </Link>
         </Button>
-        <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
+        <Button
+          variant="outline"
+          className="size-10 rainbow-border hover:rainbow-glow"
+          asChild
+        >
           <Link
             href="https://linkedin.com/in/Xinacy"
             target="_blank"
@@ -329,7 +408,11 @@ function ProfileCardContent() {
             <LinkedinIcon className="size-5 text-blue-500" />
           </Link>
         </Button>
-        <Button variant="outline" className="size-10 rainbow-border hover:rainbow-glow" asChild>
+        <Button
+          variant="outline"
+          className="size-10 rainbow-border hover:rainbow-glow"
+          asChild
+        >
           <Link
             href="https://discord.com/users/1211202988518146050"
             target="_blank"
@@ -351,7 +434,10 @@ function ProfileCardContent() {
             <span className="rainbow-text font-bold">Gay Resume</span>
           </Link>
         </Button>
-        <Button className="rainbow-button text-white font-bold border-0" asChild>
+        <Button
+          className="rainbow-button text-white font-bold border-0"
+          asChild
+        >
           <Link href="mailto:gaurav@xinacy.com">
             <Send className="size-4" />
             Slide Into DMs 💌
