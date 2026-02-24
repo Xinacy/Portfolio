@@ -243,7 +243,7 @@ function ProfileCardContent() {
       <div className="flex justify-center gap-3 mb-6">
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://instagram.com/Xinacy7"
+            href="https://instagram.com/Xiinacy"
             target="_blank"
             rel="noopener noreferrer"
           >
