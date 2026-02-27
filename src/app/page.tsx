@@ -115,9 +115,15 @@ export default function Home() {
             </div>
 
             <div className="mb-16">
-              <div className="flex items-center mb-8">
-                <Code className="w-6 h-6 text-white mr-2" />
-                <h2 className="text-2xl font-bold">GitHub Activity</h2>
+              <div className="flex flex-col mb-8">
+                <div className="flex items-center">
+                  <Code className="w-6 h-6 text-white mr-2" />
+                  <h2 className="text-2xl font-bold">GitHub Activity</h2>
+                </div>
+                <p className="mt-2 text-gray-500 text-sm">
+                  Personal account only — company commits cannot be displayed
+                  here.
+                </p>
               </div>
 
               <CometCard>

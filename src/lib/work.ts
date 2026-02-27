@@ -2,14 +2,18 @@ const work = [
   {
     company: "MegaLLM",
     logo: "megallm.png",
-    position: "Senior Backend Engineer",
-    duration: "December 2025 - Present",
+    position: "Backend Engineering Intern",
+    duration: "December 2025 - February 2026",
     type: "Full-Time",
     location: "Remote (BLR, India)",
     description:
       "Unified api for 10+ providers and 300+ LLM models with a single API key and a single endpoint.",
-    achievements: ["will update soon..."],
-    status: "current",
+    achievements: [
+      "Designed and implemented an image inference API gateway from scratch, handling request routing, model orchestration, and scalable deployment.",
+      "Contributed to an open-source repository by extending its capabilities with PDF processing and operations support.",
+      "Built an end-to-end fine-tuning pipeline using LoRA to efficiently adapt large language models on large-scale datasets.",
+    ],
+    status: "completed",
   },
   {
     company: "Tryzent Technologies",
