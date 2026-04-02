@@ -60,6 +60,20 @@
       height: 0;
     }
   }
+
+  @keyframes fade-in-blur {
+    0% {
+      opacity: 0;
+      filter: blur(12px);
+      transform: translateY(12px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+  --animate-fade-in-blur: fade-in-blur 0.65s ease-out both;
 }
 
 :root {

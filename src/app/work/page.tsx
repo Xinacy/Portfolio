@@ -1,11 +1,9 @@
 import React from "react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, Calendar, MapPin, Award } from "lucide-react";
+import { Calendar, MapPin, Award } from "lucide-react";
 import { Timeline } from "@/components/ui/timeline";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import work from "@/lib/work";
+import { work } from "@/lib/resume";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -59,20 +57,20 @@ export default function WorkPage() {
                     exp.status === "current"
                       ? "bg-green-900/20 border-green-500/50 text-green-400"
                       : exp.status === "acquired"
-                      ? "bg-blue-900/20 border-blue-500/50 text-blue-400"
-                      : "bg-gray-900/20 border-gray-500/50 text-gray-400"
+                        ? "bg-blue-900/20 border-blue-500/50 text-blue-400"
+                        : "bg-gray-900/20 border-gray-500/50 text-gray-400"
                   }
                 `}
                 >
                   {exp.status === "current"
                     ? "Current"
                     : exp.status === "acquired"
-                    ? "Acquired"
-                    : exp.status === "discontinued"
-                    ? "Discontinued"
-                    : exp.status === "completed"
-                    ? "Completed"
-                    : "L"}
+                      ? "Acquired"
+                      : exp.status === "discontinued"
+                        ? "Discontinued"
+                        : exp.status === "completed"
+                          ? "Completed"
+                          : "L"}
                 </Badge>
               </div>
               <h4 className="text-xl font-semibold text-blue-400 mb-3">
@@ -131,20 +129,7 @@ export default function WorkPage() {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden pb-28">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-6 sm:py-8">
-        <div className="mb-8">
-          <Button
-            variant="outline"
-            className="bg-transparent border-gray-600/50 hover:border-gray-500/50 transition-colors"
-            asChild
-          >
-            <Link href="/" aria-label="Back to home">
-              <ChevronLeft className="size-4" />
-              Back to home
-            </Link>
-          </Button>
-        </div>
-
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 sm:pt-28 pb-6 sm:pb-8">
         <header className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">
             <h1 className="text-5xl md:text-6xl font-bold bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
@@ -183,20 +168,20 @@ export default function WorkPage() {
                         exp.status === "current"
                           ? "bg-green-900/20 border-green-500/50 text-green-400"
                           : exp.status === "acquired"
-                          ? "bg-blue-900/20 border-blue-500/50 text-blue-400"
-                          : "bg-gray-900/20 border-gray-500/50 text-gray-400"
+                            ? "bg-blue-900/20 border-blue-500/50 text-blue-400"
+                            : "bg-gray-900/20 border-gray-500/50 text-gray-400"
                       }
                     `}
                     >
                       {exp.status === "current"
                         ? "Current"
                         : exp.status === "acquired"
-                        ? "Acquired"
-                        : exp.status === "discontinued"
-                        ? "Discontinued"
-                        : exp.status === "completed"
-                        ? "Completed"
-                        : "L"}
+                          ? "Acquired"
+                          : exp.status === "discontinued"
+                            ? "Discontinued"
+                            : exp.status === "completed"
+                              ? "Completed"
+                              : "L"}
                     </Badge>
                   </div>
                   <h4 className="text-lg font-semibold text-blue-400 mb-2">

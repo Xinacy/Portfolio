@@ -1,17 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  ExternalLink,
-  ChevronLeft,
-  Mail,
-  Linkedin,
-  Globe,
-  MapPin,
-} from "lucide-react";
+import { ExternalLink, Mail, Linkedin, Globe, MapPin } from "lucide-react";
 import DownloadButton from "@/components/ResumeDownload";
 import { Metadata } from "next";
-import work from "@/lib/work";
+import { work, skills, summary } from "@/lib/resume";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xinacy.com/"),
@@ -41,20 +34,7 @@ export default function ResumePage() {
 
   return (
     <div className="min-h-screen bg-black pb-28">
-      <div className="max-w-5xl mx-auto px-6 py-6 sm:py-8">
-        <div className="mb-6">
-          <Button
-            variant="outline"
-            className="bg-transparent border-gray-600/50"
-            asChild
-          >
-            <Link href="/" aria-label="Back to home">
-              <ChevronLeft className="size-4" />
-              Back to home
-            </Link>
-          </Button>
-        </div>
-
+      <div className="max-w-5xl mx-auto px-6 pt-24 sm:pt-28 pb-6 sm:pb-8">
         <header className="mb-6 sm:mb-8 text-center">
           <h1 className="text-3xl font-bold mb-2">Resume</h1>
 
@@ -106,13 +86,7 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-4 border-b-2 border-gray-600 pb-1 text-white">
               SUMMARY
             </h2>
-            <p className="leading-relaxed text-gray-300">
-              Experienced software developer proficient in Python, JavaScript,
-              TypeScript, and React, with a strong foundation in DevOps. Skilled
-              in building scalable web and real-time applications, with
-              expertise in payment gateway integrations, microservices, and
-              system optimizations.
-            </p>
+            <p className="leading-relaxed text-gray-300">{summary}</p>
           </section>
 
           <section className="mb-8">
@@ -170,31 +144,15 @@ export default function ResumePage() {
               SKILLS
             </h2>
             <div className="space-y-2 text-sm text-gray-300">
-              <div>
-                <strong className="text-white">Languages:</strong> Python,
-                JavaScript, TypeScript, HTML, CSS, SQL.
-              </div>
-              <div>
-                <strong className="text-white">Library/Frameworks:</strong>{" "}
-                React, Next.js, TailwindCSS, FastAPI, Express, Tortoise-ORM,
-                websockets, discord.py, Electron
-              </div>
-              <div>
-                <strong className="text-white">AI/LLM Frameworks:</strong>{" "}
-                LangChain, LlamaIndex, LangGraph, Hugging Face, OpenAI API.
-              </div>
-              <div>
-                <strong className="text-white">Database:</strong> PostgreSQL,
-                MongoDB.
-              </div>
-              <div>
-                <strong className="text-white">DevOps:</strong> Sentry,
-                Prometheus, Grafana, Loki, Docker, Kubernetes, Jenkins.
-              </div>
-              <div>
-                <strong className="text-white">Others:</strong> Redis, Nginx,
-                Caddy, Traefik, Kafka, Amazon S3, Cloudflare R2.
-              </div>
+              {skills.map((category) => {
+                const label = category.resumeTitle ?? category.title;
+                const text = category.items.join(", ") + ".";
+                return (
+                  <div key={category.title}>
+                    <strong className="text-white">{label}:</strong> {text}
+                  </div>
+                );
+              })}
             </div>
           </section>
         </div>
